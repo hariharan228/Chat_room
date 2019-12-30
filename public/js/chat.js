@@ -81,7 +81,7 @@ $messageForm.addEventListener('submit', (e) => {
         $messageFormInput.focus()
 
         if (error) {
-            return console.log(error)
+            return alert('You have typed a bad word! Profanity is not allowed here')
         }
 
         console.log('Message delivered!')

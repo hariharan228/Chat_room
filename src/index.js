@@ -40,6 +40,9 @@ io.on('connection', (socket) => {
     socket.on('sendMessage', (message, callback) => {
         const user = getUser(socket.id)
         const filter = new Filter()
+        filter.addWords('fcuk', 'punda', 'sunni','thevidiya','pundha','otha','oththa','gommala','ommala','kommala','thevdia','thevidia','dvdya','b*tch','bit*h','bi*ch','housary','koothi','koodi','poolu','olu','othu','gotha','gothalakka','thayoli','thaili','thaayoli','thaaili',);
+        
+
 
         if (filter.isProfane(message)) {
             return callback('Profanity is not allowed!')
